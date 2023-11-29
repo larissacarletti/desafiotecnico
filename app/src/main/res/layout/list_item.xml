@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_outline"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/black"
+    app:cardCornerRadius="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp">
+
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="4dp">
+
+               <TextView
+                   android:id="@+id/info_departure"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:padding="4dp"
+                   android:text="@string/iata_departure"
+                   android:textColor="@color/black"
+                   android:textSize="18sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginStart="5dp">
+
+               </TextView>
+
+               <ImageView
+                   android:id="@+id/imageView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="10dp"
+                   android:layout_toStartOf="@+id/info_arrival"
+                   android:background="@drawable/arrow_vector"
+                   app:layout_constraintEnd_toStartOf="@id/info_arrival"
+                   app:layout_constraintHorizontal_bias="0.457"
+                   app:layout_constraintStart_toEndOf="@id/info_departure"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/info_arrival"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:padding="4dp"
+                   android:text="@string/iata_arrival"
+                   android:textColor="@color/black"
+                   android:textSize="18sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginEnd="5dp"/>
+
+               <TextView
+                   android:id="@+id/time_departure"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="start"
+                   android:padding="4dp"
+                   android:text="@string/time_departure"
+                   android:textColor="@color/black"
+                   android:textSize="16sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/info_departure"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginStart="5dp"/>
+
+               <TextView
+                   android:id="@+id/time_arrival"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="start"
+                   android:padding="4dp"
+                   android:text="@string/time_arrival"
+                   android:textColor="@color/black"
+                   android:textSize="16sp"
+                   app:layout_constraintEnd_toEndOf="@+id/info_arrival"
+                   app:layout_constraintTop_toBottomOf="@+id/info_arrival"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginEnd="5dp"/>
+
+               <TextView
+                   android:id="@+id/carrier"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="start"
+                   android:padding="4dp"
+                   android:text="@string/carrier_company"
+                   android:textColor="@color/black"
+                   android:textSize="16sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/time_departure"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginStart="5dp"/>
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>
+
