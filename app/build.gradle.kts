@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
 }
 
 android {
@@ -10,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.example.desafiotecnicoandroid"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -39,7 +41,6 @@ android {
     }
 
 }
-
 dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -65,9 +66,9 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
-    // Koin injection
-    implementation ("io.insert-koin:koin-android:3.3.2")
-    implementation ("io.insert-koin:koin-core:3.3.2")
+//    // Koin injection
+//    implementation ("io.insert-koin:koin-android:3.3.2")
+//    implementation ("io.insert-koin:koin-core:3.3.2")
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.12.0")
@@ -82,4 +83,13 @@ dependencies {
     // Preferences DataStore
     implementation ("androidx.datastore:datastore-preferences:1.1.0-alpha06")
 
+    //Dagger - Hilt
+    implementation ("com.google.dagger:hilt-android:2.44.2")
+    kapt("com.google.dagger:hilt-android-compiler:2.44.2")
+    kapt("androidx.hilt:hilt-compiler:1.1.0")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
+
 }
+
+
+
