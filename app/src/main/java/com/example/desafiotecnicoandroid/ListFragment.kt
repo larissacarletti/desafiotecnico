@@ -13,7 +13,7 @@ import com.example.desafiotecnicoandroid.models.FlightsItem
 import com.example.desafiotecnicoandroid.viewmodel.FlightViewModel
 
 
-class ListFragment : Fragment(R.layout.fragment_list) {
+class ListFragment : Fragment(R.layout.fragment_list), FlightAdapter.FlightClickListener {
 
     private lateinit var binding: FragmentListBinding
     private lateinit var flightAdapter: FlightAdapter
@@ -34,8 +34,6 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         viewModel = ViewModelProvider(this)[FlightViewModel::class.java]
         setUpRecyclerView()
 
-
-
     }
 
     fun setUpRecyclerView() = binding.run {
@@ -44,6 +42,9 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         recyclerView.adapter = flightAdapter
     }
 
+    override fun onItemClicked(flight: FlightsItem) {
+        selectedFlight = flight
+    }
 
 
 }

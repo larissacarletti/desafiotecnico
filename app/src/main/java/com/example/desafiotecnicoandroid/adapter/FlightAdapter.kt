@@ -46,19 +46,9 @@ class FlightAdapter() : RecyclerView.Adapter<FlightAdapter.FlightViewHolder>() {
 
     }
 
-//    private val diffCallback = object : DiffUtil.ItemCallback<FlightsItem>() {
-//
-//        override fun areItemsTheSame(oldItem: FlightsItem, newItem: FlightsItem): Boolean {
-//            return oldItem.id == newItem.id
-//        }
-//
-//        override fun areContentsTheSame(oldItem: FlightsItem, newItem: FlightsItem): Boolean {
-//            return oldItem == newItem
-//        }
-//    }
-//
-//    private val differ = AsyncListDiffer(this, diffCallback)
-
+    interface FlightClickListener {
+        fun onItemClicked(flight: FlightsItem)
+    }
 
 
 }
