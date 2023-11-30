@@ -1,6 +1,7 @@
 package com.example.desafiotecnicoandroid.di
 
 import com.example.desafiotecnicoandroid.api.FlightApi
+import com.example.desafiotecnicoandroid.repository.FlightRepository
 import com.example.desafiotecnicoandroid.utils.Constants.BASEURL
 import dagger.Module
 import dagger.Provides
@@ -22,6 +23,12 @@ object AppModule {
             .build()
             .create(FlightApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideFlightRepository(
+        api: FlightApi
+    ) = FlightRepository(api)
 
 
 }
