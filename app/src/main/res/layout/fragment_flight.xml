@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:id="@+id/top_app_bar"
-        android:layout_width="412dp"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
