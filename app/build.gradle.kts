@@ -84,10 +84,8 @@ dependencies {
     implementation ("androidx.datastore:datastore-preferences:1.1.0-alpha06")
 
     //Dagger - Hilt
-    implementation ("com.google.dagger:hilt-android:2.44.2")
-    kapt("com.google.dagger:hilt-android-compiler:2.44.2")
-    kapt("androidx.hilt:hilt-compiler:1.1.0")
-    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation ("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
 
 }
 

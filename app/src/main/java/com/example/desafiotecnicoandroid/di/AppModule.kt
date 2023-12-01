@@ -1,7 +1,7 @@
 package com.example.desafiotecnicoandroid.di
 
-import com.example.desafiotecnicoandroid.api.FlightApi
-import com.example.desafiotecnicoandroid.repository.FlightRepository
+import com.example.desafiotecnicoandroid.data.api.FlightApi
+import com.example.desafiotecnicoandroid.data.repository.FlightRepository
 import com.example.desafiotecnicoandroid.utils.Constants.BASEURL
 import dagger.Module
 import dagger.Provides

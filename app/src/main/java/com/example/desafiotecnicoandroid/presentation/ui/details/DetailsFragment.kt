@@ -1,10 +1,11 @@
-package com.example.desafiotecnicoandroid
+package com.example.desafiotecnicoandroid.presentation.ui.details
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.desafiotecnicoandroid.R
 
 class DetailsFragment : Fragment() {
 
