@@ -1,8 +1,11 @@
 package com.example.desafiotecnicoandroid.data.models
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class FlightsItem(
     @SerializedName("id") val id: String,
     @SerializedName("arrival") val arrival: Arrival,
@@ -13,18 +16,21 @@ data class FlightsItem(
     @SerializedName("duration") val duration: Int,
     @SerializedName("hasAirportChange") val hasAirportChange: Boolean,
     @SerializedName("totalStops") val totalStops: Int
-) {
+) : Parcelable {
+
+    @Parcelize
     data class Departure(
         @SerializedName("city") val city: String,
         @SerializedName("dateTime") val dateTime: String,
         @SerializedName("locationCode") val locationCode: String
-    )
+    ) : Parcelable
 
+    @Parcelize
     data class Arrival(
         @SerializedName("city") val city: String,
         @SerializedName("dateTime") val dateTime: String,
         @SerializedName("locationCode") val locationCode: String
-    )
+    ) : Parcelable
 
 
 }

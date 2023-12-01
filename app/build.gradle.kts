@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
     id("kotlin-kapt")
+    id ("androidx.navigation.safeargs.kotlin")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -66,10 +68,6 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
-//    // Koin injection
-//    implementation ("io.insert-koin:koin-android:3.3.2")
-//    implementation ("io.insert-koin:koin-core:3.3.2")
-
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     //kapt ("com.github.bumptech.glide:compiler:4.12.0")
@@ -86,6 +84,11 @@ dependencies {
     //Dagger - Hilt
     implementation ("com.google.dagger:hilt-android:2.48.1")
     kapt("com.google.dagger:hilt-android-compiler:2.48.1")
+
+    //Navigation
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.5")
+
 
 }
 

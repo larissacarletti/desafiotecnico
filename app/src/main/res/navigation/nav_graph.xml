@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listFragment">
-
+    app:startDestination="@id/flightsFragment">
     <fragment
-        android:id="@+id/listFragment"
+        android:id="@+id/flightsFragment"
         android:name="com.example.desafiotecnicoandroid.presentation.ui.flights.FlightsFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
-            android:id="@+id/action_listFragment_to_detailsFragment"
+            android:id="@+id/action_flightsFragment_to_detailsFragment"
             app:destination="@id/detailsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -22,5 +21,10 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.desafiotecnicoandroid.presentation.ui.details.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="flight"
+            app:argType="com.example.desafiotecnicoandroid.data.models.FlightsItem"
+            app:nullable="true" />
+    </fragment>
 </navigation>
