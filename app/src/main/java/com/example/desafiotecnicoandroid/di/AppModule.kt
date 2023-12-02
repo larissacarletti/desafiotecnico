@@ -29,6 +29,4 @@ object AppModule {
     fun provideFlightRepository(
         api: FlightApi
     ) = FlightRepository(api)
-
-
 }

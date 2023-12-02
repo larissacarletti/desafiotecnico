@@ -6,10 +6,9 @@ import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
 
 @ActivityScoped
-class FlightRepository @Inject constructor( private val api: FlightApi) {
+class FlightRepository @Inject constructor(private val api: FlightApi) {
 
     suspend fun getFlights(): List<FlightsItem>? {
         return api.getFlightList().body()
     }
-
 }

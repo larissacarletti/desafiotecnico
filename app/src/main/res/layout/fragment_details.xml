@@ -17,6 +17,7 @@
         android:background="@color/black">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -26,32 +27,30 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/carrier_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="50dp"
-        android:padding="4dp"
-        android:text="@string/carrier_company"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+    <ImageView
+        android:id="@+id/carrier_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/details_departure"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
 
     <TextView
         android:id="@+id/details_departure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="4dp"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginTop="@dimen/margin_x"
         android:text="@string/iata_departure"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/carrier_details"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp">
+        app:layout_constraintTop_toBottomOf="@+id/carrier_logo">
 
     </TextView>
 
@@ -60,60 +59,77 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
         android:layout_toStartOf="@+id/details_arrival"
         android:background="@drawable/arrow_vector"
         app:layout_constraintBottom_toBottomOf="@+id/details_departure"
         app:layout_constraintEnd_toStartOf="@id/details_arrival"
-        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toEndOf="@id/details_departure"
-        app:layout_constraintTop_toBottomOf="@id/carrier_details"/>
+        app:layout_constraintTop_toTopOf="@+id/details_departure" />
 
     <TextView
         android:id="@+id/details_arrival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:padding="4dp"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:layout_marginTop="@dimen/margin_x"
         android:text="@string/iata_arrival"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/date_arrival_details"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintTop_toBottomOf="@id/carrier_details"/>
+        app:layout_constraintTop_toBottomOf="@+id/carrier_logo" />
 
     <TextView
         android:id="@+id/time_departure_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:padding="4dp"
         android:text="@string/time_departure"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/details_departure"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"/>
+        app:layout_constraintTop_toBottomOf="@id/date_departure_details"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_xx"/>
 
     <TextView
         android:id="@+id/time_arrival_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:padding="4dp"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_xx"
         android:text="@string/time_arrival"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/details_arrival"
-        app:layout_constraintTop_toBottomOf="@+id/details_arrival"
-        android:layout_marginTop="10dp" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_arrival_details" />
 
+    <TextView
+        android:id="@+id/date_departure_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_xx"
+        android:text="@string/date_departure"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_departure" />
 
-
-
-
-
+    <TextView
+        android:id="@+id/date_arrival_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_xx"
+        android:text="@string/date_arrival"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_arrival" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.desafiotecnicoandroid.R
 import com.example.desafiotecnicoandroid.data.models.FlightsItem
 import com.example.desafiotecnicoandroid.databinding.FragmentDetailsBinding
 import com.example.desafiotecnicoandroid.utils.formatDate
+import com.example.desafiotecnicoandroid.utils.formatTime
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 
@@ -36,7 +37,6 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
 
     private fun setFlightInformation() = binding.run {
         flight = args.flight
-        carrierDetails.text = flight.carrier.capitalize()
         detailsDeparture.text = getString(
             R.string.iata_departure,
             flight.departure.locationCode,
@@ -47,8 +47,14 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             flight.arrival.locationCode,
             flight.arrival.city
         )
-        timeDepartureDetails.text = formatDate(flight.departure.dateTime)
-        timeArrivalDetails.text = formatDate(flight.arrival.dateTime)
+        timeDepartureDetails.text = formatTime(flight.departure.dateTime)
+        timeArrivalDetails.text = formatTime(flight.arrival.dateTime)
+        dateArrivalDetails.text = formatDate(flight.arrival.dateTime)
+        dateDepartureDetails.text = formatDate(flight.arrival.dateTime)
+
+        Glide.with(carrierLogo)
+            .load(flight.carrierLogoUrl)
+            .into(carrierLogo)
     }
 
     private fun setUpToolbar() = binding.run {

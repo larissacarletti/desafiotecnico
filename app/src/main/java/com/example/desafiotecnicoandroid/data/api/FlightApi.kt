@@ -9,6 +9,4 @@ interface FlightApi {
     @GET("test-mobile-flights-list.json")
     suspend fun getFlightList(): Response<List<FlightsItem>>
 
-
-
 }

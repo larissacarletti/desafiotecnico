@@ -15,12 +15,11 @@ import javax.inject.Inject
 class FlightViewModel @Inject constructor(repository: FlightRepository) : ViewModel() {
 
     private val _flights = MutableLiveData<List<FlightsItem>>()
-    val flight: LiveData<List<FlightsItem>> =_flights
+    val flight: LiveData<List<FlightsItem>> = _flights
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
             _flights.postValue(repository.getFlights())
         }
     }
-
 }

@@ -1,18 +1,13 @@
 package com.example.desafiotecnicoandroid.presentation.ui.flights
 
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafiotecnicoandroid.R
 import com.example.desafiotecnicoandroid.data.models.FlightsItem
 import com.example.desafiotecnicoandroid.databinding.ListItemBinding
 import com.example.desafiotecnicoandroid.utils.formatDate
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
-import java.util.TimeZone
+import com.example.desafiotecnicoandroid.utils.formatTime
 
 
 class FlightAdapter(private val listener: FlightsFragment) :
@@ -33,7 +28,6 @@ class FlightAdapter(private val listener: FlightsFragment) :
         )
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: FlightViewHolder, position: Int) {
         holder.run {
             departureInfo.text = holder.itemView.context.getString(
@@ -48,8 +42,11 @@ class FlightAdapter(private val listener: FlightsFragment) :
             )
             carrierInfo.text = flightList[position].carrier.capitalize()
 
-            departureTime.text = formatDate(flightList[position].departure.dateTime)
-            arrivalTime.text = formatDate(flightList[position].arrival.dateTime)
+            departureTime.text = formatTime(flightList[position].departure.dateTime)
+            arrivalTime.text = formatTime(flightList[position].arrival.dateTime)
+
+            departureDate.text = formatDate(flightList[position].departure.dateTime)
+            arrivalDate.text = formatDate(flightList[position].arrival.dateTime)
 
             flightCard.setOnClickListener {
                 listener.onItemClicked(flightList[holder.adapterPosition])
@@ -66,6 +63,8 @@ class FlightAdapter(private val listener: FlightsFragment) :
         val arrivalTime = binding.timeArrival
         val carrierInfo = binding.carrier
         val flightCard = binding.cardFlight
+        val departureDate = binding.dateDeparture
+        val arrivalDate = binding.dateArrival
 
     }
 

@@ -3,9 +3,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="iata_departure">%s - %s</string>
     <string name="iata_arrival">%s - %s</string>
-    <string name="time_departure">Departure Time</string>
+    <string name="time_departure">Dep. Time</string>
     <string name="time_arrival">Arrival Time</string>
     <string name="carrier_company">Carrier</string>
     <string name="headline">Lista de Voos</string>
     <string name="details_flight">Detalhes do Voo</string>
+    <string name="date_departure">Dep. Date</string>
+    <string name="date_arrival">Arrival Date</string>
+    <string name="info_arrival">Data de chegada:</string>
+    <string name="info_departure">Data de saída:</string>
+    <string name="duration">Duração do Voo:</string>
+    <string name="duration_time">Duration Time</string>
 </resources>

@@ -31,7 +31,5 @@ data class FlightsItem(
         @SerializedName("dateTime") val dateTime: String,
         @SerializedName("locationCode") val locationCode: String
     ) : Parcelable
-
-
 }
 

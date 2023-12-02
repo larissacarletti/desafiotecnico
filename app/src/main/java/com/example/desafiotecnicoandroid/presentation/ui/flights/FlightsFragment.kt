@@ -1,7 +1,6 @@
 package com.example.desafiotecnicoandroid.presentation.ui.flights
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,6 +49,4 @@ class FlightsFragment : Fragment(R.layout.fragment_flight), FlightAdapter.Flight
         val action = FlightsFragmentDirections.actionFlightsFragmentToDetailsFragment(flight)
         findNavController().navigate(action)
     }
-
-
 }
