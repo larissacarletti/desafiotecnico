@@ -15,7 +15,7 @@ data class FlightsItem(
     @SerializedName("departure") val departure: Departure,
     @SerializedName("duration") val duration: Int,
     @SerializedName("hasAirportChange") val hasAirportChange: Boolean,
-    @SerializedName("totalStops") val totalStops: Int
+    @SerializedName("totalStops") var totalStops: Int
 ) : Parcelable {
 
     @Parcelize

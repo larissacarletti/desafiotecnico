@@ -14,4 +14,8 @@
     <string name="info_departure">Data de saída:</string>
     <string name="duration">Duração do Voo:</string>
     <string name="duration_time">Duration Time</string>
+    <string name="duration_text">Duração do Voo:</string>
+    <string name="stop_text">Número de paradas:</string>
+    <string name="duration_info">Duration Info</string>
+    <string name="stops_info">Stops Info\n</string>
 </resources>

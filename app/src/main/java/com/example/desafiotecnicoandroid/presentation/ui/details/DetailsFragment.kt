@@ -12,6 +12,8 @@ import com.example.desafiotecnicoandroid.R
 import com.example.desafiotecnicoandroid.data.models.FlightsItem
 import com.example.desafiotecnicoandroid.databinding.FragmentDetailsBinding
 import com.example.desafiotecnicoandroid.utils.formatDate
+import com.example.desafiotecnicoandroid.utils.formatDuration
+import com.example.desafiotecnicoandroid.utils.formatStops
 import com.example.desafiotecnicoandroid.utils.formatTime
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
@@ -51,6 +53,8 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         timeArrivalDetails.text = formatTime(flight.arrival.dateTime)
         dateArrivalDetails.text = formatDate(flight.arrival.dateTime)
         dateDepartureDetails.text = formatDate(flight.arrival.dateTime)
+        durationInfo.text = formatDuration(flight.duration)
+        stopsInfo.text = formatStops(flight.totalStops)
 
         Glide.with(carrierLogo)
             .load(flight.carrierLogoUrl)
