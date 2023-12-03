@@ -3,6 +3,7 @@
     <style name="Base.Theme.DesafioTecnicoAndroid" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/black</item>
     </style>
 
     <style name="Theme.DesafioTecnicoAndroid" parent="Base.Theme.DesafioTecnicoAndroid" />

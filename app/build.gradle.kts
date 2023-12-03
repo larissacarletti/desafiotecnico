@@ -78,9 +78,6 @@ dependencies {
     //ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
 
-    // Preferences DataStore
-    implementation("androidx.datastore:datastore-preferences:1.1.0-alpha06")
-
     //Dagger - Hilt
     implementation("com.google.dagger:hilt-android:2.48.1")
     kapt("com.google.dagger:hilt-android-compiler:2.48.1")
