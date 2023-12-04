@@ -1,7 +1,8 @@
 package com.example.desafiotecnicoandroid.di
 
 import com.example.desafiotecnicoandroid.data.api.FlightApi
-import com.example.desafiotecnicoandroid.data.repository.FlightRepository
+import com.example.desafiotecnicoandroid.data.repository.FlightRepositoryImpl
+import com.example.desafiotecnicoandroid.domain.repository.FlightRepository
 import com.example.desafiotecnicoandroid.utils.Constants.BASEURL
 import dagger.Module
 import dagger.Provides
@@ -28,5 +29,5 @@ object AppModule {
     @Singleton
     fun provideFlightRepository(
         api: FlightApi
-    ) = FlightRepository(api)
+    ) : FlightRepository = FlightRepositoryImpl(api)
 }

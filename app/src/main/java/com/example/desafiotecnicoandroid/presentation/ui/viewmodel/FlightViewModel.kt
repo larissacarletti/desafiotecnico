@@ -5,7 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.desafiotecnicoandroid.data.models.FlightsItem
-import com.example.desafiotecnicoandroid.data.repository.FlightRepository
+import com.example.desafiotecnicoandroid.data.repository.FlightRepositoryImpl
+import com.example.desafiotecnicoandroid.domain.repository.FlightRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
