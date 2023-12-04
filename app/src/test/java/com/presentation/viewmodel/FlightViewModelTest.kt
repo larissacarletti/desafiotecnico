@@ -11,7 +11,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class FlightViewModelTest {
 
-    private lateinit var flightViewModel : FlightViewModel
+    private lateinit var flightViewModel: FlightViewModel
 
     @Before
     fun setUp() {
@@ -20,15 +20,19 @@ class FlightViewModelTest {
     }
 
     fun getFlight_returnsCurrentFlight() {
-        val flight = mutableListOf(FlightsItem(id = "1",
-        arrival = FlightsItem.Arrival("Rio de Janeiro", "7:00", "GIG"),
-        carrier = "carrier",
-        carrierLogoUrl = "logoUrl",
-        daysDifference = 0,
-        departure = FlightsItem.Departure("São Paulo", "8:00", "CGH"),
-        duration = 1000,
-        hasAirportChange = false,
-        totalStops = 0))
+        val flight = mutableListOf(
+            FlightsItem(
+                id = "1",
+                arrival = FlightsItem.Arrival("Rio de Janeiro", "7:00", "GIG"),
+                carrier = "carrier",
+                carrierLogoUrl = "logoUrl",
+                daysDifference = 0,
+                departure = FlightsItem.Departure("São Paulo", "8:00", "CGH"),
+                duration = 1000,
+                hasAirportChange = false,
+                totalStops = 0
+            )
+        )
         val currentFlight = flightViewModel.flight
         assertThat(currentFlight).isEqualTo(flight)
     }
